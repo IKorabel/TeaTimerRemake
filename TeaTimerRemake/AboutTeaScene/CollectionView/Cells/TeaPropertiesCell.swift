@@ -11,7 +11,7 @@ import UIKit
 final class TeaPropertiesCell: UICollectionViewCell {
     static let cellIdentifier = "TeaPropertiesCell"
     
-    private var teaPropertiesStackView: UIStackView = {
+    lazy private var teaPropertiesStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
@@ -19,7 +19,7 @@ final class TeaPropertiesCell: UICollectionViewCell {
         return stackView
     }()
     
-    private var propertyImage: UIImageView = {
+    lazy private var propertyImage: UIImageView = {
         let propertyImage = UIImageView()
         propertyImage.contentMode = .scaleAspectFit
         propertyImage.image = UIImage(systemName: "person.fill.checkmark")!
@@ -27,7 +27,7 @@ final class TeaPropertiesCell: UICollectionViewCell {
         return propertyImage
     }()
     
-    private var propertyNameLabel: UILabel = {
+    lazy private var propertyNameLabel: UILabel = {
         let propertyNameLabel = UILabel()
         propertyNameLabel.font = UIFont.boldSystemFont(ofSize: 14)
         propertyNameLabel.text = "Text"

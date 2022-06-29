@@ -10,7 +10,7 @@ import UIKit
 
 typealias TTColor = UIColor
 
-extension UIColor {
+extension TTColor {
     
     static var teaTimerGreen: TTColor {
         return .init(red: 0, green: 170, blue: 114, alpha: 1)

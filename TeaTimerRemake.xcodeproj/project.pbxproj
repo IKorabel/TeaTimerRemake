@@ -11,6 +11,13 @@
 		A204DF2A2861091C00394647 /* TeaMainInfoHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A204DF292861091C00394647 /* TeaMainInfoHeaderView.swift */; };
 		A204DF2D28610B7200394647 /* TeaMainInfoHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A204DF2C28610B7200394647 /* TeaMainInfoHeaderView.xib */; };
 		A204DF2F2861178B00394647 /* CollectionViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A204DF2E2861178B00394647 /* CollectionViewSectionHeader.swift */; };
+		A2077CF5286CEE5000788FA9 /* TeaProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2077CF4286CEE5000788FA9 /* TeaProperty.swift */; };
+		A2077CF7286CEF0300788FA9 /* TeaHealthProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2077CF6286CEF0300788FA9 /* TeaHealthProperties.swift */; };
+		A2077CF9286CF1F200788FA9 /* DescriptableTeaProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2077CF8286CF1F200788FA9 /* DescriptableTeaProperty.swift */; };
+		A2077CFB286CF82D00788FA9 /* TeaSuperPowerProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2077CFA286CF82D00788FA9 /* TeaSuperPowerProperties.swift */; };
+		A2077CFD286CFB2500788FA9 /* TeaMainProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2077CFC286CFB2500788FA9 /* TeaMainProperties.swift */; };
+		A2077D01286D058100788FA9 /* TeaPropertyContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2077D00286D058100788FA9 /* TeaPropertyContent.swift */; };
+		A23E42402862762F00B60E6F /* TeaPropertyGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E423F2862762F00B60E6F /* TeaPropertyGroup.swift */; };
 		A2A9BD39285802E800216794 /* TeaTimerColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9BD38285802E800216794 /* TeaTimerColors.swift */; };
 		A2A9BD3B2858075000216794 /* TeaPropertiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9BD3A2858075000216794 /* TeaPropertiesCell.swift */; };
 		A2A9BD3D2858166500216794 /* TTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9BD3C2858166500216794 /* TTButton.swift */; };
@@ -30,6 +37,13 @@
 		A204DF292861091C00394647 /* TeaMainInfoHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaMainInfoHeaderView.swift; sourceTree = "<group>"; };
 		A204DF2C28610B7200394647 /* TeaMainInfoHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeaMainInfoHeaderView.xib; sourceTree = "<group>"; };
 		A204DF2E2861178B00394647 /* CollectionViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSectionHeader.swift; sourceTree = "<group>"; };
+		A2077CF4286CEE5000788FA9 /* TeaProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaProperty.swift; sourceTree = "<group>"; };
+		A2077CF6286CEF0300788FA9 /* TeaHealthProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaHealthProperties.swift; sourceTree = "<group>"; };
+		A2077CF8286CF1F200788FA9 /* DescriptableTeaProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptableTeaProperty.swift; sourceTree = "<group>"; };
+		A2077CFA286CF82D00788FA9 /* TeaSuperPowerProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaSuperPowerProperties.swift; sourceTree = "<group>"; };
+		A2077CFC286CFB2500788FA9 /* TeaMainProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaMainProperties.swift; sourceTree = "<group>"; };
+		A2077D00286D058100788FA9 /* TeaPropertyContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaPropertyContent.swift; sourceTree = "<group>"; };
+		A23E423F2862762F00B60E6F /* TeaPropertyGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaPropertyGroup.swift; sourceTree = "<group>"; };
 		A2A9BD38285802E800216794 /* TeaTimerColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaTimerColors.swift; sourceTree = "<group>"; };
 		A2A9BD3A2858075000216794 /* TeaPropertiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaPropertiesCell.swift; sourceTree = "<group>"; };
 		A2A9BD3C2858166500216794 /* TTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTButton.swift; sourceTree = "<group>"; };
@@ -61,8 +75,14 @@
 		A204DF262861074F00394647 /* AboutTeaScene */ = {
 			isa = PBXGroup;
 			children = (
+				A2077D02286D05BB00788FA9 /* ViewControllers */,
+				A2077CFF286D055900788FA9 /* Protocols */,
+				A2077CFE286D04FF00788FA9 /* Models */,
+				A2077CFA286CF82D00788FA9 /* TeaSuperPowerProperties.swift */,
+				A23E423F2862762F00B60E6F /* TeaPropertyGroup.swift */,
 				A204DF27286107EE00394647 /* CollectionView */,
-				A2A9BD3E2858181600216794 /* AboutTeaViewController.swift */,
+				A2077CF6286CEF0300788FA9 /* TeaHealthProperties.swift */,
+				A2077CFC286CFB2500788FA9 /* TeaMainProperties.swift */,
 			);
 			path = AboutTeaScene;
 			sourceTree = "<group>";
@@ -92,6 +112,31 @@
 				A2A9BD3A2858075000216794 /* TeaPropertiesCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		A2077CFE286D04FF00788FA9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A2077CF4286CEE5000788FA9 /* TeaProperty.swift */,
+				A2077D00286D058100788FA9 /* TeaPropertyContent.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A2077CFF286D055900788FA9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A2077CF8286CF1F200788FA9 /* DescriptableTeaProperty.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A2077D02286D05BB00788FA9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A2A9BD3E2858181600216794 /* AboutTeaViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		A2A9BD372858029A00216794 /* TeaTimerUIKit */ = {
@@ -273,13 +318,20 @@
 			files = (
 				A2D6DCDA2852946400DD5761 /* ViewController.swift in Sources */,
 				A2D6DCD62852946400DD5761 /* AppDelegate.swift in Sources */,
+				A23E42402862762F00B60E6F /* TeaPropertyGroup.swift in Sources */,
 				A2D6DCD82852946400DD5761 /* SceneDelegate.swift in Sources */,
+				A2077CF7286CEF0300788FA9 /* TeaHealthProperties.swift in Sources */,
 				A2A9BD3F2858181600216794 /* AboutTeaViewController.swift in Sources */,
 				A2A9BD39285802E800216794 /* TeaTimerColors.swift in Sources */,
 				A204DF2F2861178B00394647 /* CollectionViewSectionHeader.swift in Sources */,
+				A2077CF5286CEE5000788FA9 /* TeaProperty.swift in Sources */,
+				A2077D01286D058100788FA9 /* TeaPropertyContent.swift in Sources */,
 				A204DF2A2861091C00394647 /* TeaMainInfoHeaderView.swift in Sources */,
 				A2A9BD3D2858166500216794 /* TTButton.swift in Sources */,
+				A2077CF9286CF1F200788FA9 /* DescriptableTeaProperty.swift in Sources */,
+				A2077CFB286CF82D00788FA9 /* TeaSuperPowerProperties.swift in Sources */,
 				A2D6DCE02852946400DD5761 /* TeaTimerRemake.xcdatamodeld in Sources */,
+				A2077CFD286CFB2500788FA9 /* TeaMainProperties.swift in Sources */,
 				A2A9BD3B2858075000216794 /* TeaPropertiesCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

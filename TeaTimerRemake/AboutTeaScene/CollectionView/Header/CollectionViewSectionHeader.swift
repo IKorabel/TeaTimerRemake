@@ -11,7 +11,7 @@ import UIKit
 class SectionHeader: UICollectionReusableView {
     static let reuseIdentifier = "SectionHeader"
     
-    lazy var headerLabel: UILabel = {
+    lazy private var headerLabel: UILabel = {
         let headerLabel = UILabel()
         headerLabel.font = UIFont.boldSystemFont(ofSize: 22)
         headerLabel.textColor = .black
@@ -32,6 +32,10 @@ class SectionHeader: UICollectionReusableView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setTitle(title: String) {
+        headerLabel.text = title
     }
     
     private func commonInit() {
