@@ -10,12 +10,12 @@ import Foundation
 
 enum TeaPropertyGroup {
     
-    // RawValue is SectionIndex
     case mainProperties(mainPropertyType: TeaMainProperties)
     case superPowerProperties(property: TeaSuperPowerProperties)
     case tasteProperties(teaTasteProperty: TeaTasteTypeProperty)
     case healthProperties(property: TeaHealthProperties)
     
+    // RawValue is SectionIndex
     var rawValue: Int {
         switch self {
         case .mainProperties: return 0

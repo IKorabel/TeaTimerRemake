@@ -13,7 +13,7 @@ typealias TTColor = UIColor
 extension TTColor {
     
     static var teaTimerGreen: TTColor {
-        return .init(red: 0, green: 170, blue: 114, alpha: 1)
+        return .init(red: 0/255, green: 170/255, blue: 114/255, alpha: 1)
     }
     
     static var teaTimerBlue: TTColor {

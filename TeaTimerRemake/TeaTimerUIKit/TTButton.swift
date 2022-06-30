@@ -47,7 +47,7 @@ enum TTButtonType {
     var buttonComponents: (title: String, backgroundColor: TTColor) {
         switch self {
         case .learnMoreAboutTea:
-            return ("About Tea", .systemCyan)
+            return ("About Tea", .systemPurple)
         case .addTeaToUsersList:
             return ("Add to your list", .teaTimerBlue)
         case .brewTea:

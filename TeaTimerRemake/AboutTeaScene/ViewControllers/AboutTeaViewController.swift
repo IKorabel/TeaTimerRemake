@@ -12,8 +12,23 @@ class AboutTeaViewController: UIViewController {
     lazy var aboutTeaCollectionView: UICollectionView = {
         let aboutTeaCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
         aboutTeaCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        aboutTeaCollectionView.showsVerticalScrollIndicator = false
         return aboutTeaCollectionView
     }()
+    
+    var groupOfTeaProperties = TeaPropertiesGroup(allProperties: [
+        TeaProperty(groupOfProperty: .mainProperties(mainPropertyType: .teaRegion(teaRegion: .china(provinceName: "Mainland")))),
+        TeaProperty(groupOfProperty: .mainProperties(mainPropertyType: .teaDrinkSituation(teaDrinkSituationType: .morning))),
+        TeaProperty(groupOfProperty: .mainProperties(mainPropertyType: .teaPower(teaPowerType: .energizer))),
+        TeaProperty(groupOfProperty: .healthProperties(property: .boostsImmunity)),
+        TeaProperty(groupOfProperty: .healthProperties(property: .removesToxins)),
+        TeaProperty(groupOfProperty: .healthProperties(property: .weightLoss)),
+        TeaProperty(groupOfProperty: .tasteProperties(teaTasteProperty: .flower)),
+        TeaProperty(groupOfProperty: .tasteProperties(teaTasteProperty: .bitter)),
+        TeaProperty(groupOfProperty: .tasteProperties(teaTasteProperty: .grass)),
+        TeaProperty(groupOfProperty: .superPowerProperties(property: .IncreasesEfficiency)),
+        TeaProperty(groupOfProperty: .superPowerProperties(property: .concentration))
+    ])
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,11 +76,12 @@ class AboutTeaViewController: UIViewController {
             let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
             let section = NSCollectionLayoutSection(group: group)
             section.boundarySupplementaryItems = [
-                .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: sectionNumber == 0 ? .absolute(250):.absolute(50)),
+                .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: sectionNumber == 0 ? .absolute(350):.absolute(50)),
                       elementKind: sectionNumber == 0 ? TeaMainInfoHeaderView.reuseIdentifier : SectionHeader.reuseIdentifier,
                       alignment: .topLeading)
             ]
             section.boundarySupplementaryItems.first?.contentInsets.leading = 5
+            section.contentInsets.top = 3
             return section
         }
     }
@@ -75,15 +91,17 @@ class AboutTeaViewController: UIViewController {
 extension AboutTeaViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return groupOfTeaProperties.getNumberOfItemsForSections()[section]
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let teaPropertiesCell = collectionView.dequeueReusableCell(withReuseIdentifier: TeaPropertiesCell.cellIdentifier, for: indexPath) as? TeaPropertiesCell else { return UICollectionViewCell() }
+        let propertyForEverySection = [groupOfTeaProperties.mainProperties, groupOfTeaProperties.tasteProperties, groupOfTeaProperties.superPowerProperties, groupOfTeaProperties.healthProperties]
+        teaPropertiesCell.showPropertyContent(propertyContent: propertyForEverySection[indexPath.section][indexPath.row].propertyContent)
         return teaPropertiesCell
     }
     
@@ -93,7 +111,7 @@ extension AboutTeaViewController: UICollectionViewDelegate, UICollectionViewData
             guard let teaInfoHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: TeaMainInfoHeaderView.reuseIdentifier, for: indexPath) as? TeaMainInfoHeaderView else { return UICollectionReusableView() }
             return teaInfoHeader
         default:
-            let headerTitles = ["Main Info","How does it affect the condition?","What's the health benefits?"]
+            let headerTitles = ["Main Info","Taste","How does it affect the condition?","What's the health benefits?"]
             guard let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionHeader.reuseIdentifier, for: indexPath) as? SectionHeader else { return UICollectionReusableView() }
             sectionHeader.setTitle(title: headerTitles[indexPath.section])
             return sectionHeader

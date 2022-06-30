@@ -17,6 +17,9 @@
 		A2077CFB286CF82D00788FA9 /* TeaSuperPowerProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2077CFA286CF82D00788FA9 /* TeaSuperPowerProperties.swift */; };
 		A2077CFD286CFB2500788FA9 /* TeaMainProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2077CFC286CFB2500788FA9 /* TeaMainProperties.swift */; };
 		A2077D01286D058100788FA9 /* TeaPropertyContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2077D00286D058100788FA9 /* TeaPropertyContent.swift */; };
+		A2077D05286DC3FE00788FA9 /* SwiftBoost in Frameworks */ = {isa = PBXBuildFile; productRef = A2077D04286DC3FE00788FA9 /* SwiftBoost */; };
+		A2077D08286DC42000788FA9 /* SafeSFSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = A2077D07286DC42000788FA9 /* SafeSFSymbols */; };
+		A2077D0A286DE72100788FA9 /* TeaPropertiesGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2077D09286DE72100788FA9 /* TeaPropertiesGroup.swift */; };
 		A23E42402862762F00B60E6F /* TeaPropertyGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E423F2862762F00B60E6F /* TeaPropertyGroup.swift */; };
 		A2A9BD39285802E800216794 /* TeaTimerColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9BD38285802E800216794 /* TeaTimerColors.swift */; };
 		A2A9BD3B2858075000216794 /* TeaPropertiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9BD3A2858075000216794 /* TeaPropertiesCell.swift */; };
@@ -43,6 +46,7 @@
 		A2077CFA286CF82D00788FA9 /* TeaSuperPowerProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaSuperPowerProperties.swift; sourceTree = "<group>"; };
 		A2077CFC286CFB2500788FA9 /* TeaMainProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaMainProperties.swift; sourceTree = "<group>"; };
 		A2077D00286D058100788FA9 /* TeaPropertyContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaPropertyContent.swift; sourceTree = "<group>"; };
+		A2077D09286DE72100788FA9 /* TeaPropertiesGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaPropertiesGroup.swift; sourceTree = "<group>"; };
 		A23E423F2862762F00B60E6F /* TeaPropertyGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaPropertyGroup.swift; sourceTree = "<group>"; };
 		A2A9BD38285802E800216794 /* TeaTimerColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaTimerColors.swift; sourceTree = "<group>"; };
 		A2A9BD3A2858075000216794 /* TeaPropertiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaPropertiesCell.swift; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2077D08286DC42000788FA9 /* SafeSFSymbols in Frameworks */,
+				A2077D05286DC3FE00788FA9 /* SwiftBoost in Frameworks */,
 				3CA5FA4B60F3C0A05CABEF09 /* Pods_TeaTimerRemake.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,11 +84,7 @@
 				A2077D02286D05BB00788FA9 /* ViewControllers */,
 				A2077CFF286D055900788FA9 /* Protocols */,
 				A2077CFE286D04FF00788FA9 /* Models */,
-				A2077CFA286CF82D00788FA9 /* TeaSuperPowerProperties.swift */,
-				A23E423F2862762F00B60E6F /* TeaPropertyGroup.swift */,
 				A204DF27286107EE00394647 /* CollectionView */,
-				A2077CF6286CEF0300788FA9 /* TeaHealthProperties.swift */,
-				A2077CFC286CFB2500788FA9 /* TeaMainProperties.swift */,
 			);
 			path = AboutTeaScene;
 			sourceTree = "<group>";
@@ -117,8 +119,11 @@
 		A2077CFE286D04FF00788FA9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A23E423F2862762F00B60E6F /* TeaPropertyGroup.swift */,
+				A2077D0B286DFDD000788FA9 /* TeaPropertiesCategories */,
 				A2077CF4286CEE5000788FA9 /* TeaProperty.swift */,
 				A2077D00286D058100788FA9 /* TeaPropertyContent.swift */,
+				A2077D09286DE72100788FA9 /* TeaPropertiesGroup.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -137,6 +142,16 @@
 				A2A9BD3E2858181600216794 /* AboutTeaViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A2077D0B286DFDD000788FA9 /* TeaPropertiesCategories */ = {
+			isa = PBXGroup;
+			children = (
+				A2077CFA286CF82D00788FA9 /* TeaSuperPowerProperties.swift */,
+				A2077CF6286CEF0300788FA9 /* TeaHealthProperties.swift */,
+				A2077CFC286CFB2500788FA9 /* TeaMainProperties.swift */,
+			);
+			path = TeaPropertiesCategories;
 			sourceTree = "<group>";
 		};
 		A2A9BD372858029A00216794 /* TeaTimerUIKit */ = {
@@ -218,6 +233,10 @@
 			dependencies = (
 			);
 			name = TeaTimerRemake;
+			packageProductDependencies = (
+				A2077D04286DC3FE00788FA9 /* SwiftBoost */,
+				A2077D07286DC42000788FA9 /* SafeSFSymbols */,
+			);
 			productName = TeaTimerRemake;
 			productReference = A2D6DCD22852946400DD5761 /* TeaTimerRemake.app */;
 			productType = "com.apple.product-type.application";
@@ -246,6 +265,10 @@
 				Base,
 			);
 			mainGroup = A2D6DCC92852946400DD5761;
+			packageReferences = (
+				A2077D03286DC3FE00788FA9 /* XCRemoteSwiftPackageReference "SwiftBoost" */,
+				A2077D06286DC42000788FA9 /* XCRemoteSwiftPackageReference "SafeSFSymbols" */,
+			);
 			productRefGroup = A2D6DCD32852946400DD5761 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -331,6 +354,7 @@
 				A2077CF9286CF1F200788FA9 /* DescriptableTeaProperty.swift in Sources */,
 				A2077CFB286CF82D00788FA9 /* TeaSuperPowerProperties.swift in Sources */,
 				A2D6DCE02852946400DD5761 /* TeaTimerRemake.xcdatamodeld in Sources */,
+				A2077D0A286DE72100788FA9 /* TeaPropertiesGroup.swift in Sources */,
 				A2077CFD286CFB2500788FA9 /* TeaMainProperties.swift in Sources */,
 				A2A9BD3B2858075000216794 /* TeaPropertiesCell.swift in Sources */,
 			);
@@ -408,7 +432,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -462,7 +486,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -554,6 +578,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A2077D03286DC3FE00788FA9 /* XCRemoteSwiftPackageReference "SwiftBoost" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparrowcode/SwiftBoost";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		A2077D06286DC42000788FA9 /* XCRemoteSwiftPackageReference "SafeSFSymbols" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparrowcode/SafeSFSymbols";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A2077D04286DC3FE00788FA9 /* SwiftBoost */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A2077D03286DC3FE00788FA9 /* XCRemoteSwiftPackageReference "SwiftBoost" */;
+			productName = SwiftBoost;
+		};
+		A2077D07286DC42000788FA9 /* SafeSFSymbols */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A2077D06286DC42000788FA9 /* XCRemoteSwiftPackageReference "SafeSFSymbols" */;
+			productName = SafeSFSymbols;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		A2D6DCDE2852946400DD5761 /* TeaTimerRemake.xcdatamodeld */ = {

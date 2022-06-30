@@ -10,4 +10,7 @@ import Foundation
 struct TeaProperty {
     var groupOfProperty: TeaPropertyGroup
     var propertyContent: TeaPropertyContent { return groupOfProperty.teaPropertyContent }
+    var sectionNumber: Int {
+        return groupOfProperty.rawValue
+    }
 }

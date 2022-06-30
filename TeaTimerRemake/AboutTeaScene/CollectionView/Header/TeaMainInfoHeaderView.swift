@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftBoost
 
 class TeaMainInfoHeaderView: UICollectionReusableView {
     static let reuseIdentifier = "TeaMainInfo"
@@ -16,8 +17,8 @@ class TeaMainInfoHeaderView: UICollectionReusableView {
     lazy private var teaMainInfoStackView: UIStackView = {
         let teaInfoStackView = UIStackView()
         teaInfoStackView.axis = .vertical
-        teaInfoStackView.distribution = .fillEqually
-        teaInfoStackView.spacing = 1
+        teaInfoStackView.distribution = .fillProportionally
+        teaInfoStackView.spacing = 0
         teaInfoStackView.translatesAutoresizingMaskIntoConstraints = false
         return teaInfoStackView
     }()
@@ -27,23 +28,23 @@ class TeaMainInfoHeaderView: UICollectionReusableView {
         let teaImage = UIImageView()
         teaImage.translatesAutoresizingMaskIntoConstraints = false
         teaImage.contentMode = .scaleAspectFit
-        teaImage.image = UIImage(systemName: "pencil.slash")
+        teaImage.image = UIImage(named: "ShuPuerh")
         return teaImage
     }()
     
     lazy private var teaNameLabel: UILabel = {
         let teaNameLabel = UILabel()
-        teaNameLabel.font = UIFont.preferredFont(forTextStyle: .title2)
+        teaNameLabel.font = UIFont.boldSystemFont(ofSize: 22)
         teaNameLabel.textColor = .black
         teaNameLabel.textAlignment = .center
-        teaNameLabel.text = "Text"
+        teaNameLabel.text = "Shu Puerh"
         teaNameLabel.translatesAutoresizingMaskIntoConstraints = false
         return teaNameLabel
     }()
     
     //MARK: Lifecycle
     
-    convenience init(teaName: String = "Puerh", teaImage: UIImage = UIImage(named: "pencil.slash")!) {
+    convenience init(teaName: String = "Puerh", teaImage: UIImage = UIImage(named: "Shu-Puerh Image")!) {
         self.init()
         teaImageView.image = teaImage
         teaNameLabel.text = teaName
@@ -70,8 +71,11 @@ class TeaMainInfoHeaderView: UICollectionReusableView {
     private func presentStackView() {
         addSubview(teaMainInfoStackView)
         NSLayoutConstraint.activate([
-            teaMainInfoStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            teaMainInfoStackView.centerYAnchor.constraint(equalTo: centerYAnchor)
+            teaMainInfoStackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 8),
+            teaMainInfoStackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -8),
+            teaMainInfoStackView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            teaMainInfoStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
+           // teaMainInfoStackView.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
         teaMainInfoStackView.addArrangedSubview(teaImageView)
         teaMainInfoStackView.addArrangedSubview(teaNameLabel)
@@ -80,15 +84,16 @@ class TeaMainInfoHeaderView: UICollectionReusableView {
     private func presentTeaImageView() {
         addSubview(teaImageView)
         NSLayoutConstraint.activate([
-            teaImageView.heightAnchor.constraint(equalToConstant: 100),
-            teaImageView.widthAnchor.constraint(equalToConstant: 100)
+            teaImageView.heightAnchor.constraint(equalToConstant: 75),
+            teaImageView.widthAnchor.constraint(equalToConstant: 75)
         ])
     }
     
     private func presentTeaNameLabel() {
         addSubview(teaNameLabel)
         NSLayoutConstraint.activate([
-            teaNameLabel.widthAnchor.constraint(equalToConstant: 414)
+            teaNameLabel.widthAnchor.constraint(equalToConstant: 414),
+            teaNameLabel.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
 

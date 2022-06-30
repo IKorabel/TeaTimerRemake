@@ -47,6 +47,12 @@ final class TeaPropertiesCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func showPropertyContent(propertyContent: TeaPropertyContent) {
+        propertyNameLabel.text = propertyContent.title
+        propertyImage.image = propertyContent.image
+        propertyImage.tintColor = propertyContent.color
+    }
+    
     private func commonInit() {
         setCellSettings()
         addStackView()
@@ -61,7 +67,7 @@ final class TeaPropertiesCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             teaPropertiesStackView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
             teaPropertiesStackView.rightAnchor.constraint(equalTo: contentView.rightAnchor),
-            teaPropertiesStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 3),
+            teaPropertiesStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
             teaPropertiesStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
