@@ -15,11 +15,13 @@ class TeaMainInfoHeaderView: UICollectionReusableView {
     //MARK: Outlets
     
     lazy private var teaMainInfoStackView: UIStackView = {
-        let teaInfoStackView = UIStackView()
+        let teaInfoStackView = UIStackView(arrangedSubviews: [teaImageView, teaNameLabel, brewTeaButton])
+        teaInfoStackView.translatesAutoresizingMaskIntoConstraints = false
         teaInfoStackView.axis = .vertical
         teaInfoStackView.distribution = .fillProportionally
+        teaInfoStackView.alignment = .center
         teaInfoStackView.spacing = 0
-        teaInfoStackView.translatesAutoresizingMaskIntoConstraints = false
+        teaInfoStackView.setCustomSpacing(18, after: teaNameLabel)
         return teaInfoStackView
     }()
     
@@ -34,13 +36,28 @@ class TeaMainInfoHeaderView: UICollectionReusableView {
     
     lazy private var teaNameLabel: UILabel = {
         let teaNameLabel = UILabel()
+        teaNameLabel.translatesAutoresizingMaskIntoConstraints = false
         teaNameLabel.font = UIFont.boldSystemFont(ofSize: 22)
         teaNameLabel.textColor = .black
         teaNameLabel.textAlignment = .center
-        teaNameLabel.text = "Shu Puerh"
-        teaNameLabel.translatesAutoresizingMaskIntoConstraints = false
+        teaNameLabel.text = "Те Гуань Инь"
         return teaNameLabel
     }()
+    
+    lazy private var brewTeaButton: UIButton = {
+        let brewTeaButton = UIButton(type: .system)
+        brewTeaButton.translatesAutoresizingMaskIntoConstraints = false
+        brewTeaButton.setBackgroundColor(TTColor.teaTimerGreen, forState: .normal)
+        brewTeaButton.setTitle("Brew", for: .normal)
+        brewTeaButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        brewTeaButton.tintColor = .white
+        brewTeaButton.layer.cornerRadius = 20
+        brewTeaButton.masksToBounds = true
+        brewTeaButton.addTarget(self, action: #selector(didClickedOnBrewButton(_:)), for: .touchUpInside)
+        return brewTeaButton
+    }()
+    
+    
     
     //MARK: Lifecycle
     
@@ -62,7 +79,13 @@ class TeaMainInfoHeaderView: UICollectionReusableView {
     
     //MARK: Views Presentation
     
+    func setTea(teaName: String = "Puerh", teaImage: UIImage) {
+        teaImageView.image = teaImage
+        teaNameLabel.text = teaName
+    }
+    
     private func commonInit() {
+        presentButton()
         presentTeaImageView()
         presentTeaNameLabel()
         presentStackView()
@@ -71,21 +94,26 @@ class TeaMainInfoHeaderView: UICollectionReusableView {
     private func presentStackView() {
         addSubview(teaMainInfoStackView)
         NSLayoutConstraint.activate([
-            teaMainInfoStackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 8),
-            teaMainInfoStackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -8),
+            teaMainInfoStackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 20),
+            teaMainInfoStackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -20),
             teaMainInfoStackView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             teaMainInfoStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
-           // teaMainInfoStackView.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
-        teaMainInfoStackView.addArrangedSubview(teaImageView)
-        teaMainInfoStackView.addArrangedSubview(teaNameLabel)
     }
     
     private func presentTeaImageView() {
         addSubview(teaImageView)
         NSLayoutConstraint.activate([
-            teaImageView.heightAnchor.constraint(equalToConstant: 75),
-            teaImageView.widthAnchor.constraint(equalToConstant: 75)
+            teaImageView.heightAnchor.constraint(equalToConstant: 250),
+            teaImageView.widthAnchor.constraint(equalToConstant: 250),
+        ])
+    }
+    
+    private func presentButton() {
+        addSubview(brewTeaButton)
+        NSLayoutConstraint.activate([
+            brewTeaButton.heightAnchor.constraint(equalToConstant: 40),
+            brewTeaButton.widthAnchor.constraint(equalToConstant: 120)
         ])
     }
     
@@ -93,8 +121,15 @@ class TeaMainInfoHeaderView: UICollectionReusableView {
         addSubview(teaNameLabel)
         NSLayoutConstraint.activate([
             teaNameLabel.widthAnchor.constraint(equalToConstant: 414),
-            teaNameLabel.heightAnchor.constraint(equalToConstant: 50)
+            teaNameLabel.heightAnchor.constraint(equalToConstant: 30),
         ])
     }
+    
+    //MARK: Actions
+    
+    @objc func didClickedOnBrewButton(_ sender: UIButton) {
+        print("Did Clicked")
+    }
+    
 
 }

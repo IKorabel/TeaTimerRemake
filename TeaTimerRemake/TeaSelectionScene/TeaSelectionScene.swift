@@ -8,12 +8,25 @@
 import UIKit
 import SwiftVideoBackground
 
-class ViewController: UIViewController {
+class TeaSelectionScene: UIViewController {
+    
+    lazy var brewButton: TTButton = {
+        let button = TTButton(buttonType: .brewTea, kindOfButton: .system, translatesAutoresizingMaskIntoConstraints: false)
+        button.frame = CGRect(x: view.center.x, y: view.center.y, width: 60, height: 100)
+        return button
+    }()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         showVideo()
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidLayoutSubviews() {
+        view.addSubview(brewButton)
+        brewButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        brewButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
     
     func showVideo() {

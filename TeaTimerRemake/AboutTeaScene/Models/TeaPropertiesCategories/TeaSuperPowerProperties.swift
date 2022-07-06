@@ -10,7 +10,6 @@ import SafeSFSymbols
 import UIKit
 
 enum TeaSuperPowerProperties: DescriptableTeaProperty {
-
     
     case concentration,IncreasesEfficiency,relievesFatigue
     case other(customContent: TeaPropertyContent)
@@ -34,6 +33,10 @@ enum TeaSuperPowerProperties: DescriptableTeaProperty {
         case .other(let customContent):
             return customContent
         }
+    }
+    
+    var propertyAdditionalDescription: String {
+        return ""
     }
     
 }

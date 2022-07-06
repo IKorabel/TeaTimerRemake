@@ -10,4 +10,5 @@ import UIKit
 
 protocol DescriptableTeaProperty {
     func getFullPropertyDescription() -> TeaPropertyContent
+    var propertyAdditionalDescription: String { get }
 }

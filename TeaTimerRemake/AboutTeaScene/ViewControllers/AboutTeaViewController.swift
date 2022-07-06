@@ -60,9 +60,9 @@ class AboutTeaViewController: UIViewController {
     private func presentCollectionView() {
         view.addSubview(aboutTeaCollectionView)
         NSLayoutConstraint.activate([
-            aboutTeaCollectionView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 8),
-            aboutTeaCollectionView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -8),
-            aboutTeaCollectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            aboutTeaCollectionView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 8),
+            aboutTeaCollectionView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -8),
+            aboutTeaCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             aboutTeaCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
@@ -76,12 +76,12 @@ class AboutTeaViewController: UIViewController {
             let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
             let section = NSCollectionLayoutSection(group: group)
             section.boundarySupplementaryItems = [
-                .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: sectionNumber == 0 ? .absolute(350):.absolute(50)),
+                .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: sectionNumber == 0 ? .absolute(279):.absolute(50)),
                       elementKind: sectionNumber == 0 ? TeaMainInfoHeaderView.reuseIdentifier : SectionHeader.reuseIdentifier,
                       alignment: .topLeading)
             ]
             section.boundarySupplementaryItems.first?.contentInsets.leading = 5
-            section.contentInsets.top = 3
+            section.contentInsets.top = sectionNumber == 0 ? 10 :3
             return section
         }
     }
@@ -96,6 +96,11 @@ extension AboutTeaViewController: UICollectionViewDelegate, UICollectionViewData
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let selectedCell = collectionView.cellForItem(at: indexPath) else { return }
+        selectedCell.addSpringAnimation()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

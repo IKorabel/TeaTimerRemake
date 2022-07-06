@@ -10,13 +10,9 @@ import UIKit
 import SafeSFSymbols
 
 enum TeaHealthProperties: DescriptableTeaProperty {
-    
-    static func == (lhs: TeaHealthProperties, rhs: TeaHealthProperties) -> Bool {
-        return true
-    }
-    
     case boostsImmunity,weightLoss,removesToxins
     case other(customContent: TeaPropertyContent)
+    
     
     func getFullPropertyDescription() -> TeaPropertyContent {
         let tintColor = TTColor.teaTimerPink
@@ -42,5 +38,11 @@ enum TeaHealthProperties: DescriptableTeaProperty {
         case .other(let customContent):
             return customContent
         }
+    }
+    
+    
+    //MARK: ToDo
+    var propertyAdditionalDescription: String {
+        return ""
     }
 }

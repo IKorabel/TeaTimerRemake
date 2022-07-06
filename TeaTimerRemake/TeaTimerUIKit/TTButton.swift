@@ -10,39 +10,49 @@ import UIKit
 
 class TTButton: UIButton {
     
+    var ttButtonType: TTButtonType = .none
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
+        commonInit()
     }
     
-    convenience init(buttonType: TTButtonType) {
-        self.init()
+    convenience init(buttonType: TTButtonType, kindOfButton: UIButton.ButtonType, translatesAutoresizingMaskIntoConstraints: Bool) {
+        self.init(type: kindOfButton)
+        self.translatesAutoresizingMaskIntoConstraints = translatesAutoresizingMaskIntoConstraints
         setComponents(components: buttonType.buttonComponents)
     }
     
     required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        commonInit()
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override func layoutSubviews() {
+        super.layoutSubviews()
         commonInit()
     }
-    
     private func commonInit() {
-        layer.cornerRadius = 50
+        setCornerRadius()
         setTitleColor(.white, for: .normal)
-        titleLabel?.font = UIFont.boldSystemFont(ofSize: 22)
+        titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+    }
+    
+    private func setCornerRadius() {
+        layer.cornerRadius = 20
+        layer.masksToBounds = true
     }
     
     private func setComponents(components: (title: String, backgroundColor: TTColor)) {
         commonInit()
         setTitle(components.title, for: .normal)
-        self.backgroundColor = backgroundColor
+        setBackgroundColor(backgroundColor ?? .white, forState: .normal)
     }
 }
 
 enum TTButtonType {
-    case learnMoreAboutTea, addTeaToUsersList, brewTea
+    case learnMoreAboutTea, addTeaToUsersList, brewTea, none
     
     var buttonComponents: (title: String, backgroundColor: TTColor) {
         switch self {
@@ -51,7 +61,9 @@ enum TTButtonType {
         case .addTeaToUsersList:
             return ("Add to your list", .teaTimerBlue)
         case .brewTea:
-            return ("Brew a tea", .teaTimerGreen)
+            return ("Brew", .teaTimerGreen)
+        case .none:
+            return ("", .clear)
         }
     }
 }

@@ -10,6 +10,7 @@ import UIKit
 import SafeSFSymbols
 
 enum TeaMainProperties: DescriptableTeaProperty {
+    
     case teaPower(teaPowerType: TeaPowerTypeProperty)
     case teaDrinkSituation(teaDrinkSituationType: TeaDrinkSituationTypeProperty)
     case teaRegion(teaRegion: TeaRegionTypeProperty)
@@ -23,6 +24,10 @@ enum TeaMainProperties: DescriptableTeaProperty {
         case .teaRegion(let teaRegion):
             return teaRegion.getFullPropertyDescription()
         }
+    }
+    
+    var propertyAdditionalDescription: String {
+        return ""
     }
     
 }
@@ -55,6 +60,10 @@ enum TeaDrinkSituationTypeProperty: DescriptableTeaProperty {
             return customContent
         }
     }
+    
+    var propertyAdditionalDescription: String {
+        return ""
+    }
 }
 
 enum TeaRegionTypeProperty: DescriptableTeaProperty {
@@ -70,12 +79,15 @@ enum TeaRegionTypeProperty: DescriptableTeaProperty {
         }
     }
     
-    
+    var propertyAdditionalDescription: String {
+        return ""
+    }
 }
 
 enum TeaPowerTypeProperty: DescriptableTeaProperty {
     case energizer, relaxer, liberater
     case other(customContent: TeaPropertyContent)
+    
     
     func getFullPropertyDescription() -> TeaPropertyContent {
         switch self {
@@ -88,6 +100,10 @@ enum TeaPowerTypeProperty: DescriptableTeaProperty {
         case .other(let customContent):
             return customContent
         }
+    }
+    
+    var propertyAdditionalDescription: String {
+        return ""
     }
 }
 
@@ -114,6 +130,10 @@ enum TeaTasteTypeProperty: DescriptableTeaProperty {
         case .other(let customContent):
             return customContent
         }
+    }
+    
+    var propertyAdditionalDescription: String {
+        return ""
     }
     
 }
