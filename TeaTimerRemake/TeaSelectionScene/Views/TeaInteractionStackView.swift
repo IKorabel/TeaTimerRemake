@@ -14,8 +14,9 @@ class TeaInteractionStackView: UIStackView {
     
     lazy private var teaNameLabel: UILabel = {
         let teaNameLabel = UILabel()
-        teaNameLabel.font = UIFont.boldSystemFont(ofSize: 33)
-        teaNameLabel.text = "Puerh"
+        teaNameLabel.font = UIFont.boldSystemFont(ofSize: 40)
+        teaNameLabel.textColor = .white
+        teaNameLabel.text = "Shen-Puerh"
         return teaNameLabel
     }()
     
@@ -71,19 +72,27 @@ class TeaInteractionStackView: UIStackView {
     
     private func commonInit() {
         setSettings()
+        presentTeaNameLabel()
         presentHorizontalMiniStackView()
         presentBrewTeaButton()
     }
     
     private func setSettings() {
         axis = .vertical
-        spacing = 5
+        spacing = 15
         distribution = .fillProportionally
     }
     
     private func presentBrewTeaButton() {
         addSubview(brewTeaButton)
         addArrangedSubview(brewTeaButton)
+    }
+    
+    private func presentTeaNameLabel() {
+        addSubview(teaNameLabel)
+        setCustomSpacing(1, after: teaNameLabel)
+        teaNameLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        addArrangedSubview(teaNameLabel)
     }
     
     @objc private func didClickedOnButton(_ sender: TTButton) {

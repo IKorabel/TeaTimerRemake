@@ -65,7 +65,7 @@ enum TTButtonType {
         case .brewTea:
             return ("Brew", .teaTimerGreen)
         case .dismiss:
-            return ("", .systemRed)
+            return ("", .systemBackground)
         case .none:
             return ("", .clear)
         }

@@ -25,6 +25,7 @@
 		A23E42402862762F00B60E6F /* TeaPropertyGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E423F2862762F00B60E6F /* TeaPropertyGroup.swift */; };
 		A26A1DC02878E0B200D166F9 /* ALPopup in Frameworks */ = {isa = PBXBuildFile; productRef = A26A1DBF2878E0B200D166F9 /* ALPopup */; };
 		A26A1DC32878E10000D166F9 /* TTAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A1DC22878E10000D166F9 /* TTAlertManager.swift */; };
+		A275317C2879C2E400CA2E26 /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = A275317B2879C2E400CA2E26 /* Hero */; };
 		A2A9BD39285802E800216794 /* TeaTimerColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9BD38285802E800216794 /* TeaTimerColors.swift */; };
 		A2A9BD3B2858075000216794 /* TeaPropertiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9BD3A2858075000216794 /* TeaPropertiesCell.swift */; };
 		A2A9BD3D2858166500216794 /* TTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9BD3C2858166500216794 /* TTButton.swift */; };
@@ -79,6 +80,7 @@
 				A26A1DC02878E0B200D166F9 /* ALPopup in Frameworks */,
 				A2077D08286DC42000788FA9 /* SafeSFSymbols in Frameworks */,
 				A2077D05286DC3FE00788FA9 /* SwiftBoost in Frameworks */,
+				A275317C2879C2E400CA2E26 /* Hero in Frameworks */,
 				3CA5FA4B60F3C0A05CABEF09 /* Pods_TeaTimerRemake.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +290,7 @@
 				A2077D04286DC3FE00788FA9 /* SwiftBoost */,
 				A2077D07286DC42000788FA9 /* SafeSFSymbols */,
 				A26A1DBF2878E0B200D166F9 /* ALPopup */,
+				A275317B2879C2E400CA2E26 /* Hero */,
 			);
 			productName = TeaTimerRemake;
 			productReference = A2D6DCD22852946400DD5761 /* TeaTimerRemake.app */;
@@ -321,6 +324,7 @@
 				A2077D03286DC3FE00788FA9 /* XCRemoteSwiftPackageReference "SwiftBoost" */,
 				A2077D06286DC42000788FA9 /* XCRemoteSwiftPackageReference "SafeSFSymbols" */,
 				A26A1DBE2878E0B100D166F9 /* XCRemoteSwiftPackageReference "ALPopup" */,
+				A275317A2879C2E400CA2E26 /* XCRemoteSwiftPackageReference "Hero" */,
 			);
 			productRefGroup = A2D6DCD32852946400DD5761 /* Products */;
 			projectDirPath = "";
@@ -660,6 +664,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		A275317A2879C2E400CA2E26 /* XCRemoteSwiftPackageReference "Hero" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HeroTransitions/Hero";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -677,6 +689,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A26A1DBE2878E0B100D166F9 /* XCRemoteSwiftPackageReference "ALPopup" */;
 			productName = ALPopup;
+		};
+		A275317B2879C2E400CA2E26 /* Hero */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A275317A2879C2E400CA2E26 /* XCRemoteSwiftPackageReference "Hero" */;
+			productName = Hero;
 		};
 /* End XCSwiftPackageProductDependency section */
 

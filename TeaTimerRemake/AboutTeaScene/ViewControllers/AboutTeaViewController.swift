@@ -18,6 +18,10 @@ class AboutTeaViewController: UIViewController {
     
     lazy var dismissButton: TTButton = {
         let dismissButton = TTButton(buttonType: .dismiss, kindOfButton: .close, translatesAutoresizingMaskIntoConstraints: false)
+        dismissButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        dismissButton.layer.cornerRadius = 0.5 * dismissButton.bounds.size.width
+        dismissButton.clipsToBounds = true
+        dismissButton.addTarget(self, action: #selector(didClickedOnDismissButton(_:)), for: .touchUpInside)
         return dismissButton
     }()
     
@@ -42,6 +46,7 @@ class AboutTeaViewController: UIViewController {
     
     private func configureUIElements() {
         setUISettings()
+        presentDismissButton()
         configureCollectionView()
     }
     
@@ -67,7 +72,7 @@ class AboutTeaViewController: UIViewController {
         NSLayoutConstraint.activate([
             aboutTeaCollectionView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 8),
             aboutTeaCollectionView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -8),
-            aboutTeaCollectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            aboutTeaCollectionView.topAnchor.constraint(equalTo: dismissButton.bottomAnchor, constant: 8),
             aboutTeaCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
@@ -75,8 +80,10 @@ class AboutTeaViewController: UIViewController {
     private func presentDismissButton() {
         view.addSubview(dismissButton)
         NSLayoutConstraint.activate([
-            aboutTeaCollectionView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -5),
-            aboutTeaCollectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 5)
+            dismissButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -8),
+            dismissButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
+            dismissButton.heightAnchor.constraint(equalToConstant: 35),
+            dismissButton.widthAnchor.constraint(equalToConstant: 35)
         ])
     }
     
@@ -97,6 +104,10 @@ class AboutTeaViewController: UIViewController {
             section.contentInsets.top = sectionNumber == 0 ? 10 :3
             return section
         }
+    }
+    
+    @objc private func didClickedOnDismissButton(_ sender: TTButton) {
+        dismiss(animated: true)
     }
     
 }
