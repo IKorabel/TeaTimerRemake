@@ -12,4 +12,5 @@ struct TeaPropertyContent {
     var title: String
     var image: UIImage
     var color: TTColor
+    var additionalDescription: String
 }

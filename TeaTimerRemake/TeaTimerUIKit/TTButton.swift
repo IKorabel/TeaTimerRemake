@@ -20,6 +20,7 @@ class TTButton: UIButton {
     convenience init(buttonType: TTButtonType, kindOfButton: UIButton.ButtonType, translatesAutoresizingMaskIntoConstraints: Bool) {
         self.init(type: kindOfButton)
         self.translatesAutoresizingMaskIntoConstraints = translatesAutoresizingMaskIntoConstraints
+        self.ttButtonType = buttonType
         setComponents(components: buttonType.buttonComponents)
     }
     
@@ -33,6 +34,7 @@ class TTButton: UIButton {
         super.layoutSubviews()
         commonInit()
     }
+    
     private func commonInit() {
         setCornerRadius()
         setTitleColor(.white, for: .normal)
@@ -47,12 +49,12 @@ class TTButton: UIButton {
     private func setComponents(components: (title: String, backgroundColor: TTColor)) {
         commonInit()
         setTitle(components.title, for: .normal)
-        setBackgroundColor(backgroundColor ?? .white, forState: .normal)
+        setBackgroundColor(components.backgroundColor, forState: .normal)
     }
 }
 
 enum TTButtonType {
-    case learnMoreAboutTea, addTeaToUsersList, brewTea, none
+    case learnMoreAboutTea, addTeaToUsersList, brewTea, dismiss, none
     
     var buttonComponents: (title: String, backgroundColor: TTColor) {
         switch self {
@@ -62,6 +64,8 @@ enum TTButtonType {
             return ("Add to your list", .teaTimerBlue)
         case .brewTea:
             return ("Brew", .teaTimerGreen)
+        case .dismiss:
+            return ("", .systemRed)
         case .none:
             return ("", .clear)
         }

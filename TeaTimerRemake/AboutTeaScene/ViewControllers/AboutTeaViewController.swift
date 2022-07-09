@@ -16,6 +16,11 @@ class AboutTeaViewController: UIViewController {
         return aboutTeaCollectionView
     }()
     
+    lazy var dismissButton: TTButton = {
+        let dismissButton = TTButton(buttonType: .dismiss, kindOfButton: .close, translatesAutoresizingMaskIntoConstraints: false)
+        return dismissButton
+    }()
+    
     var groupOfTeaProperties = TeaPropertiesGroup(allProperties: [
         TeaProperty(groupOfProperty: .mainProperties(mainPropertyType: .teaRegion(teaRegion: .china(provinceName: "Mainland")))),
         TeaProperty(groupOfProperty: .mainProperties(mainPropertyType: .teaDrinkSituation(teaDrinkSituationType: .morning))),
@@ -60,10 +65,18 @@ class AboutTeaViewController: UIViewController {
     private func presentCollectionView() {
         view.addSubview(aboutTeaCollectionView)
         NSLayoutConstraint.activate([
-            aboutTeaCollectionView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 8),
-            aboutTeaCollectionView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -8),
-            aboutTeaCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            aboutTeaCollectionView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 8),
+            aboutTeaCollectionView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -8),
+            aboutTeaCollectionView.topAnchor.constraint(equalTo: view.topAnchor),
             aboutTeaCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
+    
+    private func presentDismissButton() {
+        view.addSubview(dismissButton)
+        NSLayoutConstraint.activate([
+            aboutTeaCollectionView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -5),
+            aboutTeaCollectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 5)
         ])
     }
     
@@ -101,12 +114,15 @@ extension AboutTeaViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let selectedCell = collectionView.cellForItem(at: indexPath) else { return }
         selectedCell.addSpringAnimation()
+        let selectedProperty = groupOfTeaProperties.propertiesCollectionForEverySection[indexPath.section][indexPath.row]
+        TTAlertManager.presentAlert(alert: .teaPropertyInformation(components: selectedProperty),
+                                                                   on: self)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let teaPropertiesCell = collectionView.dequeueReusableCell(withReuseIdentifier: TeaPropertiesCell.cellIdentifier, for: indexPath) as? TeaPropertiesCell else { return UICollectionViewCell() }
-        let propertyForEverySection = [groupOfTeaProperties.mainProperties, groupOfTeaProperties.tasteProperties, groupOfTeaProperties.superPowerProperties, groupOfTeaProperties.healthProperties]
-        teaPropertiesCell.showPropertyContent(propertyContent: propertyForEverySection[indexPath.section][indexPath.row].propertyContent)
+        let propertyForEverySection = groupOfTeaProperties.propertiesCollectionForEverySection[indexPath.section][indexPath.row]
+        teaPropertiesCell.showPropertyContent(propertyContent: propertyForEverySection.propertyContent)
         return teaPropertiesCell
     }
     

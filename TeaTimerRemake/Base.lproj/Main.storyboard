@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AAU-aJ-dcp">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="113.04347826086958" y="67.633928571428569"/>
         </scene>
-        <!--Tea Selection Scene-->
+        <!--Tea Selection View Controller-->
         <scene sceneID="8mN-X4-xwK">
             <objects>
-                <viewController id="AAU-aJ-dcp" customClass="TeaSelectionScene" customModule="TeaTimerRemake" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AAU-aJ-dcp" customClass="TeaSelectionViewController" customModule="TeaTimerRemake" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AaJ-dz-2uA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -21,15 +21,17 @@
 		A2077D08286DC42000788FA9 /* SafeSFSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = A2077D07286DC42000788FA9 /* SafeSFSymbols */; };
 		A2077D0A286DE72100788FA9 /* TeaPropertiesGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2077D09286DE72100788FA9 /* TeaPropertiesGroup.swift */; };
 		A2368DDE2872E36C007BA25F /* UIViewsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2368DDD2872E36B007BA25F /* UIViewsExtensions.swift */; };
-		A2368DE2287476AB007BA25F /* TeaInteractionButtonsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2368DE1287476AB007BA25F /* TeaInteractionButtonsStackView.swift */; };
+		A2368DE2287476AB007BA25F /* TeaInteractionStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2368DE1287476AB007BA25F /* TeaInteractionStackView.swift */; };
 		A23E42402862762F00B60E6F /* TeaPropertyGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E423F2862762F00B60E6F /* TeaPropertyGroup.swift */; };
+		A26A1DC02878E0B200D166F9 /* ALPopup in Frameworks */ = {isa = PBXBuildFile; productRef = A26A1DBF2878E0B200D166F9 /* ALPopup */; };
+		A26A1DC32878E10000D166F9 /* TTAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A1DC22878E10000D166F9 /* TTAlertManager.swift */; };
 		A2A9BD39285802E800216794 /* TeaTimerColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9BD38285802E800216794 /* TeaTimerColors.swift */; };
 		A2A9BD3B2858075000216794 /* TeaPropertiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9BD3A2858075000216794 /* TeaPropertiesCell.swift */; };
 		A2A9BD3D2858166500216794 /* TTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9BD3C2858166500216794 /* TTButton.swift */; };
 		A2A9BD3F2858181600216794 /* AboutTeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9BD3E2858181600216794 /* AboutTeaViewController.swift */; };
 		A2D6DCD62852946400DD5761 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D6DCD52852946400DD5761 /* AppDelegate.swift */; };
 		A2D6DCD82852946400DD5761 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D6DCD72852946400DD5761 /* SceneDelegate.swift */; };
-		A2D6DCDA2852946400DD5761 /* TeaSelectionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D6DCD92852946400DD5761 /* TeaSelectionScene.swift */; };
+		A2D6DCDA2852946400DD5761 /* TeaSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D6DCD92852946400DD5761 /* TeaSelectionViewController.swift */; };
 		A2D6DCDD2852946400DD5761 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2D6DCDB2852946400DD5761 /* Main.storyboard */; };
 		A2D6DCE02852946400DD5761 /* TeaTimerRemake.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2D6DCDE2852946400DD5761 /* TeaTimerRemake.xcdatamodeld */; };
 		A2D6DCE22852946600DD5761 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2D6DCE12852946600DD5761 /* Assets.xcassets */; };
@@ -50,8 +52,9 @@
 		A2077D00286D058100788FA9 /* TeaPropertyContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaPropertyContent.swift; sourceTree = "<group>"; };
 		A2077D09286DE72100788FA9 /* TeaPropertiesGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaPropertiesGroup.swift; sourceTree = "<group>"; };
 		A2368DDD2872E36B007BA25F /* UIViewsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewsExtensions.swift; sourceTree = "<group>"; };
-		A2368DE1287476AB007BA25F /* TeaInteractionButtonsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaInteractionButtonsStackView.swift; sourceTree = "<group>"; };
+		A2368DE1287476AB007BA25F /* TeaInteractionStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaInteractionStackView.swift; sourceTree = "<group>"; };
 		A23E423F2862762F00B60E6F /* TeaPropertyGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaPropertyGroup.swift; sourceTree = "<group>"; };
+		A26A1DC22878E10000D166F9 /* TTAlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTAlertManager.swift; sourceTree = "<group>"; };
 		A2A9BD38285802E800216794 /* TeaTimerColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaTimerColors.swift; sourceTree = "<group>"; };
 		A2A9BD3A2858075000216794 /* TeaPropertiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaPropertiesCell.swift; sourceTree = "<group>"; };
 		A2A9BD3C2858166500216794 /* TTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTButton.swift; sourceTree = "<group>"; };
@@ -59,7 +62,7 @@
 		A2D6DCD22852946400DD5761 /* TeaTimerRemake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeaTimerRemake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D6DCD52852946400DD5761 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2D6DCD72852946400DD5761 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A2D6DCD92852946400DD5761 /* TeaSelectionScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaSelectionScene.swift; sourceTree = "<group>"; };
+		A2D6DCD92852946400DD5761 /* TeaSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaSelectionViewController.swift; sourceTree = "<group>"; };
 		A2D6DCDC2852946400DD5761 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A2D6DCDF2852946400DD5761 /* TeaTimerRemake.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TeaTimerRemake.xcdatamodel; sourceTree = "<group>"; };
 		A2D6DCE12852946600DD5761 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A26A1DC02878E0B200D166F9 /* ALPopup in Frameworks */,
 				A2077D08286DC42000788FA9 /* SafeSFSymbols in Frameworks */,
 				A2077D05286DC3FE00788FA9 /* SwiftBoost in Frameworks */,
 				3CA5FA4B60F3C0A05CABEF09 /* Pods_TeaTimerRemake.framework in Frameworks */,
@@ -169,8 +173,8 @@
 		A2368DDF287475A0007BA25F /* TeaSelectionScene */ = {
 			isa = PBXGroup;
 			children = (
+				A26A1DC42878F17600D166F9 /* ViewControllers */,
 				A2368DE028747637007BA25F /* Views */,
-				A2D6DCD92852946400DD5761 /* TeaSelectionScene.swift */,
 			);
 			path = TeaSelectionScene;
 			sourceTree = "<group>";
@@ -178,9 +182,26 @@
 		A2368DE028747637007BA25F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A2368DE1287476AB007BA25F /* TeaInteractionButtonsStackView.swift */,
+				A2368DE1287476AB007BA25F /* TeaInteractionStackView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A26A1DC12878E0D600D166F9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A2368DDC2872E332007BA25F /* Extensions */,
+				A26A1DC22878E10000D166F9 /* TTAlertManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A26A1DC42878F17600D166F9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A2D6DCD92852946400DD5761 /* TeaSelectionViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		A2A9BD372858029A00216794 /* TeaTimerUIKit */ = {
@@ -213,8 +234,8 @@
 		A2D6DCD42852946400DD5761 /* TeaTimerRemake */ = {
 			isa = PBXGroup;
 			children = (
+				A26A1DC12878E0D600D166F9 /* Helpers */,
 				A2368DDF287475A0007BA25F /* TeaSelectionScene */,
-				A2368DDC2872E332007BA25F /* Extensions */,
 				A204DF262861074F00394647 /* AboutTeaScene */,
 				A2A9BD372858029A00216794 /* TeaTimerUIKit */,
 				A2D6DCD52852946400DD5761 /* AppDelegate.swift */,
@@ -266,6 +287,7 @@
 			packageProductDependencies = (
 				A2077D04286DC3FE00788FA9 /* SwiftBoost */,
 				A2077D07286DC42000788FA9 /* SafeSFSymbols */,
+				A26A1DBF2878E0B200D166F9 /* ALPopup */,
 			);
 			productName = TeaTimerRemake;
 			productReference = A2D6DCD22852946400DD5761 /* TeaTimerRemake.app */;
@@ -298,6 +320,7 @@
 			packageReferences = (
 				A2077D03286DC3FE00788FA9 /* XCRemoteSwiftPackageReference "SwiftBoost" */,
 				A2077D06286DC42000788FA9 /* XCRemoteSwiftPackageReference "SafeSFSymbols" */,
+				A26A1DBE2878E0B100D166F9 /* XCRemoteSwiftPackageReference "ALPopup" */,
 			);
 			productRefGroup = A2D6DCD32852946400DD5761 /* Products */;
 			projectDirPath = "";
@@ -369,12 +392,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2D6DCDA2852946400DD5761 /* TeaSelectionScene.swift in Sources */,
+				A2D6DCDA2852946400DD5761 /* TeaSelectionViewController.swift in Sources */,
 				A2D6DCD62852946400DD5761 /* AppDelegate.swift in Sources */,
+				A26A1DC32878E10000D166F9 /* TTAlertManager.swift in Sources */,
 				A23E42402862762F00B60E6F /* TeaPropertyGroup.swift in Sources */,
 				A2D6DCD82852946400DD5761 /* SceneDelegate.swift in Sources */,
 				A2077CF7286CEF0300788FA9 /* TeaHealthProperties.swift in Sources */,
-				A2368DE2287476AB007BA25F /* TeaInteractionButtonsStackView.swift in Sources */,
+				A2368DE2287476AB007BA25F /* TeaInteractionStackView.swift in Sources */,
 				A2A9BD3F2858181600216794 /* AboutTeaViewController.swift in Sources */,
 				A2A9BD39285802E800216794 /* TeaTimerColors.swift in Sources */,
 				A204DF2F2861178B00394647 /* CollectionViewSectionHeader.swift in Sources */,
@@ -628,6 +652,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		A26A1DBE2878E0B100D166F9 /* XCRemoteSwiftPackageReference "ALPopup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alxrguz/ALPopup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -640,6 +672,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A2077D06286DC42000788FA9 /* XCRemoteSwiftPackageReference "SafeSFSymbols" */;
 			productName = SafeSFSymbols;
+		};
+		A26A1DBF2878E0B200D166F9 /* ALPopup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A26A1DBE2878E0B100D166F9 /* XCRemoteSwiftPackageReference "ALPopup" */;
+			productName = ALPopup;
 		};
 /* End XCSwiftPackageProductDependency section */
 

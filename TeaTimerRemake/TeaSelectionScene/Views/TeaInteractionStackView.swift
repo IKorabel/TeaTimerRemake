@@ -8,26 +8,37 @@
 import UIKit
 import SafeSFSymbols
 
-class TeaInteractionButtonsStackView: UIStackView {
+class TeaInteractionStackView: UIStackView {
 
-    var delegate: TeaInteractionButtonsStackViewDelegate?
+    var delegate: TeaInteractionStackViewDelegate?
+    
+    lazy private var teaNameLabel: UILabel = {
+        let teaNameLabel = UILabel()
+        teaNameLabel.font = UIFont.boldSystemFont(ofSize: 33)
+        teaNameLabel.text = "Puerh"
+        return teaNameLabel
+    }()
     
     lazy private var brewTeaButton: TTButton = {
         let brewTeaButton = TTButton(buttonType: .brewTea, kindOfButton: .system, translatesAutoresizingMaskIntoConstraints: false)
+        brewTeaButton.addTarget(self, action: #selector(didClickedOnButton(_:)), for: .touchUpInside)
         return brewTeaButton
     }()
 
     lazy private var saveTeaButton: TTButton = {
         let saveTeaButton = TTButton(buttonType: .addTeaToUsersList, kindOfButton: .system, translatesAutoresizingMaskIntoConstraints: false)
-        saveTeaButton.setImage(UIImage(.plus.circleFill), for: .normal)
+        saveTeaButton.setImage(UIImage(.plus), for: .normal)
         saveTeaButton.tintColor = saveTeaButton.state == .selected ? TTColor.teaTimerGreen : .white
+        saveTeaButton.layer.cornerRadius = 50
         saveTeaButton.setBackgroundColor(.white, forState: .selected)
         saveTeaButton.setTitleColor(TTColor.teaTimerGreen, for: .selected)
+        saveTeaButton.addTarget(self, action: #selector(didClickedOnButton(_:)), for: .touchUpInside)
         return saveTeaButton
     }()
     
     lazy private var infoAboutTeaButton: TTButton = {
         let infoAboutTeaButton = TTButton(buttonType: .learnMoreAboutTea, kindOfButton: .system, translatesAutoresizingMaskIntoConstraints: false)
+        infoAboutTeaButton.addTarget(self, action: #selector(didClickedOnButton(_:)), for: .touchUpInside)
         return infoAboutTeaButton
     }()
     
@@ -55,11 +66,19 @@ class TeaInteractionButtonsStackView: UIStackView {
         addSubview(saveTeaButton)
         addSubview(infoAboutTeaButton)
         addArrangedSubview(firstButtonsHorizontalMiniStackView)
+        firstButtonsHorizontalMiniStackView.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
     private func commonInit() {
+        setSettings()
         presentHorizontalMiniStackView()
         presentBrewTeaButton()
+    }
+    
+    private func setSettings() {
+        axis = .vertical
+        spacing = 5
+        distribution = .fillProportionally
     }
     
     private func presentBrewTeaButton() {
@@ -73,6 +92,6 @@ class TeaInteractionButtonsStackView: UIStackView {
 }
 
 
-protocol TeaInteractionButtonsStackViewDelegate {
+protocol TeaInteractionStackViewDelegate {
     func didClickedOnButton(typeOfClickedButton: TTButtonType)
 }

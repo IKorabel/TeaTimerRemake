@@ -38,21 +38,14 @@ class TeaMainInfoHeaderView: UICollectionReusableView {
         let teaNameLabel = UILabel()
         teaNameLabel.translatesAutoresizingMaskIntoConstraints = false
         teaNameLabel.font = UIFont.boldSystemFont(ofSize: 22)
-        teaNameLabel.textColor = .black
+        teaNameLabel.textColor = .label
         teaNameLabel.textAlignment = .center
         teaNameLabel.text = "Те Гуань Инь"
         return teaNameLabel
     }()
     
-    lazy private var brewTeaButton: UIButton = {
-        let brewTeaButton = UIButton(type: .system)
-        brewTeaButton.translatesAutoresizingMaskIntoConstraints = false
-        brewTeaButton.setBackgroundColor(TTColor.teaTimerGreen, forState: .normal)
-        brewTeaButton.setTitle("Brew", for: .normal)
-        brewTeaButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-        brewTeaButton.tintColor = .white
-        brewTeaButton.layer.cornerRadius = 20
-        brewTeaButton.masksToBounds = true
+    lazy private var brewTeaButton: TTButton = {
+        let brewTeaButton = TTButton(buttonType: .brewTea, kindOfButton: .system, translatesAutoresizingMaskIntoConstraints: false)
         brewTeaButton.addTarget(self, action: #selector(didClickedOnBrewButton(_:)), for: .touchUpInside)
         return brewTeaButton
     }()

@@ -14,7 +14,7 @@ class SectionHeader: UICollectionReusableView {
     lazy private var headerLabel: UILabel = {
         let headerLabel = UILabel()
         headerLabel.font = UIFont.boldSystemFont(ofSize: 22)
-        headerLabel.textColor = .black
+        headerLabel.textColor = .label
         headerLabel.text = "No text"
         headerLabel.translatesAutoresizingMaskIntoConstraints = false
         return headerLabel

@@ -12,6 +12,10 @@ class TeaPropertiesGroup {
     var healthProperties = [TeaProperty]()
     var superPowerProperties = [TeaProperty]()
     var tasteProperties = [TeaProperty]()
+    
+    var propertiesCollectionForEverySection: [[TeaProperty]] {
+        return [mainProperties, tasteProperties, superPowerProperties, healthProperties]
+    }
 
     convenience init(allProperties: [TeaProperty]) {
         self.init()
