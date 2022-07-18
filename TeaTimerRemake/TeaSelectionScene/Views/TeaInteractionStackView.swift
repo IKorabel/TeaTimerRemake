@@ -23,6 +23,11 @@ class TeaInteractionStackView: UIStackView {
     lazy private var brewTeaButton: TTButton = {
         let brewTeaButton = TTButton(buttonType: .brewTea, kindOfButton: .system, translatesAutoresizingMaskIntoConstraints: false)
         brewTeaButton.addTarget(self, action: #selector(didClickedOnButton(_:)), for: .touchUpInside)
+        if #available(iOS 15.0, *) {
+            brewTeaButton.setImage(UIImage(.cup.andSaucerFill), for: .normal)
+        } else {
+            brewTeaButton.setImage(UIImage(.timer), for: .normal)
+        }
         return brewTeaButton
     }()
 
@@ -39,6 +44,7 @@ class TeaInteractionStackView: UIStackView {
     
     lazy private var infoAboutTeaButton: TTButton = {
         let infoAboutTeaButton = TTButton(buttonType: .learnMoreAboutTea, kindOfButton: .system, translatesAutoresizingMaskIntoConstraints: false)
+        infoAboutTeaButton.setImage(UIImage(.info.circleFill), for: .normal)
         infoAboutTeaButton.addTarget(self, action: #selector(didClickedOnButton(_:)), for: .touchUpInside)
         return infoAboutTeaButton
     }()

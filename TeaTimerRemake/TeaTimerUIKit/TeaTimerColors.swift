@@ -28,5 +28,12 @@ extension TTColor {
         return .init(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
     }
     
+    static var whiteSmoke: TTColor {
+        return UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
+    }
+    
+    static var grayChateau: TTColor {
+        return UIColor(red: 163/255, green: 164/255, blue: 168/255, alpha: 1)
+    }
     
 }

@@ -39,6 +39,8 @@ class TTButton: UIButton {
         setCornerRadius()
         setTitleColor(.white, for: .normal)
         titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        tintColor = .white
+        ttButtonType != .dismiss ? setInsets(forContentPadding: .zero, imageTitlePadding: 5) : setInsets(forContentPadding: .zero, imageTitlePadding: .zero)
     }
     
     private func setCornerRadius() {
@@ -54,7 +56,7 @@ class TTButton: UIButton {
 }
 
 enum TTButtonType {
-    case learnMoreAboutTea, addTeaToUsersList, brewTea, dismiss, none
+    case learnMoreAboutTea, addTeaToUsersList, brewTea, dismiss, selectOption, none
     
     var buttonComponents: (title: String, backgroundColor: TTColor) {
         switch self {
@@ -65,7 +67,9 @@ enum TTButtonType {
         case .brewTea:
             return ("Brew", .teaTimerGreen)
         case .dismiss:
-            return ("", .systemBackground)
+            return ("", UIColor(hex: "DCE6EB"))
+        case .selectOption:
+            return ("Select", .white)
         case .none:
             return ("", .clear)
         }

@@ -18,9 +18,7 @@ class AboutTeaViewController: UIViewController {
     
     lazy var dismissButton: TTButton = {
         let dismissButton = TTButton(buttonType: .dismiss, kindOfButton: .close, translatesAutoresizingMaskIntoConstraints: false)
-        dismissButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         dismissButton.layer.cornerRadius = 0.5 * dismissButton.bounds.size.width
-        dismissButton.clipsToBounds = true
         dismissButton.addTarget(self, action: #selector(didClickedOnDismissButton(_:)), for: .touchUpInside)
         return dismissButton
     }()
