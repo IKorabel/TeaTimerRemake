@@ -28,6 +28,9 @@
 		A26A1DC32878E10000D166F9 /* TTAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A1DC22878E10000D166F9 /* TTAlertManager.swift */; };
 		A275317C2879C2E400CA2E26 /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = A275317B2879C2E400CA2E26 /* Hero */; };
 		A2768F552883286E00768D9D /* PrebrewingOptionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2768F542883286E00768D9D /* PrebrewingOptionCardView.swift */; };
+		A29AFF4A288702D4005DAB13 /* PreBrewingSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29AFF49288702D4005DAB13 /* PreBrewingSettingsViewController.swift */; };
+		A29AFF4D288706B1005DAB13 /* PreBrewingSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29AFF4C288706B1005DAB13 /* PreBrewingSettingsTableViewCell.swift */; };
+		A29AFF5028871281005DAB13 /* SimpleSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29AFF4F28871281005DAB13 /* SimpleSectionHeaderView.swift */; };
 		A2A72174287F760400284D34 /* PreBrewingSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A72173287F760400284D34 /* PreBrewingSelectionViewController.swift */; };
 		A2A72176287F7BDB00284D34 /* SegmentioExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A72175287F7BDB00284D34 /* SegmentioExtensions.swift */; };
 		A2A9BD39285802E800216794 /* TeaTimerColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9BD38285802E800216794 /* TeaTimerColors.swift */; };
@@ -61,6 +64,9 @@
 		A23E423F2862762F00B60E6F /* TeaPropertyGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaPropertyGroup.swift; sourceTree = "<group>"; };
 		A26A1DC22878E10000D166F9 /* TTAlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTAlertManager.swift; sourceTree = "<group>"; };
 		A2768F542883286E00768D9D /* PrebrewingOptionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrebrewingOptionCardView.swift; sourceTree = "<group>"; };
+		A29AFF49288702D4005DAB13 /* PreBrewingSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreBrewingSettingsViewController.swift; sourceTree = "<group>"; };
+		A29AFF4C288706B1005DAB13 /* PreBrewingSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreBrewingSettingsTableViewCell.swift; sourceTree = "<group>"; };
+		A29AFF4F28871281005DAB13 /* SimpleSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSectionHeaderView.swift; sourceTree = "<group>"; };
 		A2A72173287F760400284D34 /* PreBrewingSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreBrewingSelectionViewController.swift; sourceTree = "<group>"; };
 		A2A72175287F7BDB00284D34 /* SegmentioExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentioExtensions.swift; sourceTree = "<group>"; };
 		A2A9BD38285802E800216794 /* TeaTimerColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaTimerColors.swift; sourceTree = "<group>"; };
@@ -223,6 +229,31 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		A29AFF48288702AB005DAB13 /* PreBrewingSettingsScene */ = {
+			isa = PBXGroup;
+			children = (
+				A29AFF4B2887068D005DAB13 /* TableView */,
+				A29AFF49288702D4005DAB13 /* PreBrewingSettingsViewController.swift */,
+			);
+			path = PreBrewingSettingsScene;
+			sourceTree = "<group>";
+		};
+		A29AFF4B2887068D005DAB13 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				A29AFF4C288706B1005DAB13 /* PreBrewingSettingsTableViewCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		A29AFF4E28871262005DAB13 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A29AFF4F28871281005DAB13 /* SimpleSectionHeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A2A72172287F75C900284D34 /* PreBrewingSelectionScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +266,7 @@
 		A2A9BD372858029A00216794 /* TeaTimerUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				A29AFF4E28871262005DAB13 /* Views */,
 				A2A9BD38285802E800216794 /* TeaTimerColors.swift */,
 				A2A9BD3C2858166500216794 /* TTButton.swift */,
 			);
@@ -277,6 +309,7 @@
 		A2D6DCD42852946400DD5761 /* TeaTimerRemake */ = {
 			isa = PBXGroup;
 			children = (
+				A29AFF48288702AB005DAB13 /* PreBrewingSettingsScene */,
 				A2A72172287F75C900284D34 /* PreBrewingSelectionScene */,
 				A2C67CCD287B964F0067CF39 /* BrewingTimerScene */,
 				A26A1DC12878E0D600D166F9 /* Helpers */,
@@ -451,6 +484,7 @@
 				A2368DE2287476AB007BA25F /* TeaInteractionStackView.swift in Sources */,
 				A2A9BD3F2858181600216794 /* AboutTeaViewController.swift in Sources */,
 				A2A9BD39285802E800216794 /* TeaTimerColors.swift in Sources */,
+				A29AFF4A288702D4005DAB13 /* PreBrewingSettingsViewController.swift in Sources */,
 				A204DF2F2861178B00394647 /* CollectionViewSectionHeader.swift in Sources */,
 				A2077CF5286CEE5000788FA9 /* TeaProperty.swift in Sources */,
 				A2077D01286D058100788FA9 /* TeaPropertyContent.swift in Sources */,
@@ -459,8 +493,10 @@
 				A2077CF9286CF1F200788FA9 /* DescriptableTeaProperty.swift in Sources */,
 				A2077CFB286CF82D00788FA9 /* TeaSuperPowerProperties.swift in Sources */,
 				A2D6DCE02852946400DD5761 /* TeaTimerRemake.xcdatamodeld in Sources */,
+				A29AFF5028871281005DAB13 /* SimpleSectionHeaderView.swift in Sources */,
 				A2368DDE2872E36C007BA25F /* UIViewsExtensions.swift in Sources */,
 				A2A72176287F7BDB00284D34 /* SegmentioExtensions.swift in Sources */,
+				A29AFF4D288706B1005DAB13 /* PreBrewingSettingsTableViewCell.swift in Sources */,
 				A2077D0A286DE72100788FA9 /* TeaPropertiesGroup.swift in Sources */,
 				A2077CFD286CFB2500788FA9 /* TeaMainProperties.swift in Sources */,
 				A2A72174287F760400284D34 /* PreBrewingSelectionViewController.swift in Sources */,

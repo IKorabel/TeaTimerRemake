@@ -65,7 +65,7 @@ class PrebrewingOptionCardView: SwipeCard {
         roundCorners(radius: 20)
         backgroundColor = UIColor(hue: .random(in: 0...1), saturation: 1, brightness: 1, alpha: 1)
         presentTextualOptionStackView()
-        swipeDirections = [.left, .right]
+        swipeDirections = []
     }
     
     

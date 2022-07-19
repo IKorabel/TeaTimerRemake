@@ -42,6 +42,7 @@ class PreBrewingSelectionViewController: UIViewController {
     
     lazy var selectOptionButton: TTButton = {
         let selectOptionButton = TTButton(buttonType: .selectOption, kindOfButton: .system, translatesAutoresizingMaskIntoConstraints: false)
+        selectOptionButton.setTitle("Select Loose", for: .normal)
         return selectOptionButton
     }()
 
@@ -50,9 +51,8 @@ class PreBrewingSelectionViewController: UIViewController {
         configureUI()
         presentCardsStack()
         configureOptionSelectionSegmentedControl()
+        presentButton()
         segmentedControlDidChangedValue()
-        //configureOptionSelectionSegmentedControl()
-        // Do any additional setup after loading the view.
     }
     
     private func configureUI() {
@@ -61,9 +61,9 @@ class PreBrewingSelectionViewController: UIViewController {
     
     private func configureOptionSelectionSegmentedControl() {
         optionSelectionSegmentedControl.setup(content: [
-            .init(title: "Loose", image: UIImage(named: "IMG_2652-Yj5ZrggRX")!),
-            .init(title: "Pressed", image: UIImage(named: "shuPuerhPressed"))],
-            style: .imageUnderLabel,
+            .init(title: "Loose", image: UIImage(named: "LooseTea")!),
+            .init(title: "Pressed", image: UIImage(named: "puerhPressed_Small-removebg-preview"))],
+                                              style: .imageOverLabel,
             options: SegmentioOptions.TTStyleSegmentioOptions)
         presentOptionSelectionSegmentedControl()
     }
@@ -72,10 +72,11 @@ class PreBrewingSelectionViewController: UIViewController {
     private func presentOptionSelectionSegmentedControl() {
         view.addSubview(optionSelectionSegmentedControl)
         NSLayoutConstraint.activate([
-            optionSelectionSegmentedControl.topAnchor.constraint(equalTo: view.topAnchor, constant: 60),
-            optionSelectionSegmentedControl.heightAnchor.constraint(equalToConstant: 100),
+            optionSelectionSegmentedControl.topAnchor.constraint(equalTo: view.topAnchor, constant: 30),
+            optionSelectionSegmentedControl.heightAnchor.constraint(equalToConstant: 90),
             optionSelectionSegmentedControl.widthAnchor.constraint(equalToConstant: 340),
-            optionSelectionSegmentedControl.centerXAnchor.constraint(equalTo: view.centerXAnchor)])
+            optionSelectionSegmentedControl.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 30),
+            optionSelectionSegmentedControl.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -30)])
     }
     
     private func presentCardsStack() {
@@ -84,7 +85,7 @@ class PreBrewingSelectionViewController: UIViewController {
             optionsCardStack.widthAnchor.constraint(equalToConstant: 340),
             optionsCardStack.heightAnchor.constraint(equalToConstant: 533),
             optionsCardStack.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            optionsCardStack.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -60)
+            optionsCardStack.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
     }
     
@@ -96,10 +97,24 @@ class PreBrewingSelectionViewController: UIViewController {
             prebrewingSettingsStepper.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20)
         ])
     }
+    
+    private func presentButton() {
+        view.addSubview(selectOptionButton)
+        NSLayoutConstraint.activate([
+            selectOptionButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 30),
+            selectOptionButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -30),
+            selectOptionButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -55),
+            selectOptionButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
+    }
 
+    //MARK: Actions
     private func segmentedControlDidChangedValue() {
+        let optionCardDescriptions = [
+            PrebrewingOptionCardDescription(optionTitle: "Loose", optionDescription: "BL BL BL  BL BL BL", image: UIImage(named: "IMG_2652-min")!),
+            PrebrewingOptionCardDescription(optionTitle: "Pressed", optionDescription: "BLA BLA BLA BLA", image: UIImage(named: "IMG_2653-min")!)]
         optionSelectionSegmentedControl.valueDidChange = { [self] segmentio, segmentIndex in
-            print("SegmentedIndex: \(segmentIndex)")
+            selectOptionButton.setTitle("Select \(optionCardDescriptions[segmentIndex].optionTitle)", for: .normal)
             optionsCardStack.shift(withDistance: segmentIndex == 1 ? -1 : 1, animated: true)
         }
     }

@@ -11,18 +11,16 @@ import UIKit
 class SectionHeader: UICollectionReusableView {
     static let reuseIdentifier = "SectionHeader"
     
-    lazy private var headerLabel: UILabel = {
-        let headerLabel = UILabel()
-        headerLabel.font = UIFont.boldSystemFont(ofSize: 22)
-        headerLabel.textColor = .label
-        headerLabel.text = "No text"
-        headerLabel.translatesAutoresizingMaskIntoConstraints = false
-        return headerLabel
+    let simpleSectionHeaderView: SimpleSectionHeaderView = {
+        let simpleSectionHeaderView = SimpleSectionHeaderView()
+        simpleSectionHeaderView.translatesAutoresizingMaskIntoConstraints = false
+        return simpleSectionHeaderView
     }()
     
     convenience init(title: String) {
         self.init()
-        headerLabel.text = title
+        simpleSectionHeaderView.setTitle(title: title)
+        commonInit()
     }
     
     override init(frame: CGRect) {
@@ -35,17 +33,16 @@ class SectionHeader: UICollectionReusableView {
     }
     
     func setTitle(title: String) {
-        headerLabel.text = title
+        simpleSectionHeaderView.setTitle(title: title)
     }
     
     private func commonInit() {
-        addSubview(headerLabel)
+        addSubview(simpleSectionHeaderView)
         NSLayoutConstraint.activate([
-            headerLabel.leftAnchor.constraint(equalTo: leftAnchor),
-            headerLabel.rightAnchor.constraint(equalTo: rightAnchor),
-            headerLabel.topAnchor.constraint(equalTo: topAnchor),
-            headerLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
+            simpleSectionHeaderView.leftAnchor.constraint(equalTo: leftAnchor),
+            simpleSectionHeaderView.rightAnchor.constraint(equalTo: rightAnchor),
+            simpleSectionHeaderView.topAnchor.constraint(equalTo: topAnchor),
+            simpleSectionHeaderView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
-    
 }

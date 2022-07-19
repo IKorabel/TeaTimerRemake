@@ -31,11 +31,11 @@ extension SegmentioOptions {
             
 )
         let horizontalSeparator = SegmentioHorizontalSeparatorOptions(
-            type: .topAndBottom, height: 1, color: .whiteSmoke)
+            type: .top, height: 1, color: .whiteSmoke)
         
         let verticalSeparator = SegmentioVerticalSeparatorOptions(ratio: 1, color: .whiteSmoke)
         
-        let indicatorOptions = SegmentioIndicatorOptions.init(type: .bottom, ratio: 1, height: 10, color: .teaTimerGreen)
+        let indicatorOptions = SegmentioIndicatorOptions.init(type: .bottom, ratio: 1, height: 5, color: .teaTimerGreen)
         let options = SegmentioOptions(backgroundColor: .white,
                                        segmentPosition: .dynamic,
                                        scrollEnabled: true,

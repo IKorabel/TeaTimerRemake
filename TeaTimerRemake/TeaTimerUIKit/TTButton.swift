@@ -48,30 +48,34 @@ class TTButton: UIButton {
         layer.masksToBounds = true
     }
     
-    private func setComponents(components: (title: String, backgroundColor: TTColor)) {
+    private func setComponents(components: (title: String, backgroundColor: TTColor, tintColor: TTColor)) {
         commonInit()
         setTitle(components.title, for: .normal)
         setBackgroundColor(components.backgroundColor, forState: .normal)
+        setTitleColor(tintColor, for: .normal)
+        self.tintColor = tintColor
     }
 }
 
 enum TTButtonType {
-    case learnMoreAboutTea, addTeaToUsersList, brewTea, dismiss, selectOption, none
+    case learnMoreAboutTea, addTeaToUsersList, brewTea, dismiss, selectOption, addSettings, none
     
-    var buttonComponents: (title: String, backgroundColor: TTColor) {
+    var buttonComponents: (title: String, backgroundColor: TTColor, tintColor: TTColor) {
         switch self {
         case .learnMoreAboutTea:
-            return ("About Tea", .systemPurple)
+            return ("About Tea", .systemPurple, .white)
         case .addTeaToUsersList:
-            return ("Add to your list", .teaTimerBlue)
+            return ("Add to your list", .teaTimerBlue, .white)
         case .brewTea:
-            return ("Brew", .teaTimerGreen)
+            return ("Brew", .teaTimerGreen, .white)
         case .dismiss:
-            return ("", UIColor(hex: "DCE6EB"))
+            return ("", UIColor(hex: "DCE6EB"), .white)
         case .selectOption:
-            return ("Select", .white)
+            return ("Select", .teaTimerGreen, .white)
+        case .addSettings:
+            return ("", .teaTimerGreen, .white)
         case .none:
-            return ("", .clear)
+            return ("", .clear, .clear)
         }
     }
 }
