@@ -171,7 +171,8 @@ extension PreBrewingSelectionViewController: SwipeCardStackDelegate, SwipeCardSt
     }
     
     func cardStack(_ cardStack: SwipeCardStack, didSelectCardAt index: Int) {
-        print("Did select card")
+        guard let card = cardStack.card(forIndexAt: index) else  { return }
+        card.addSpringAnimation()
     }
     
     func cardStack(_ cardStack: SwipeCardStack, didSwipeCardAt index: Int, with direction: SwipeDirection) {

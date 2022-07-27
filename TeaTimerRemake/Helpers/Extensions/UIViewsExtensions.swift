@@ -13,13 +13,25 @@ import UIKit
 extension UIView {
     
     func addSpringAnimation() {
-        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseIn) {
+        UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseIn) {
             self.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
         } completion: { (_) in
             UIView.animate(withDuration: 0.15, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 2, options: .curveEaseIn, animations: {
                 self.transform = CGAffineTransform(scaleX: 1, y: 1)
             }, completion: nil)
         }
+    }
+    
+    func dropOutView() {
+        UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseIn) {
+            self.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
+        }
+    }
+    
+    func raiseView() {
+        UIView.animate(withDuration: 0.15, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 2, options: .curveEaseIn, animations: {
+            self.transform = CGAffineTransform(scaleX: 1, y: 1)
+        }, completion: nil)
     }
     
 }

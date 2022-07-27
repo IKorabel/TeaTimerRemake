@@ -24,12 +24,13 @@
 		A2368DE2287476AB007BA25F /* TeaInteractionStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2368DE1287476AB007BA25F /* TeaInteractionStackView.swift */; };
 		A23E42402862762F00B60E6F /* TeaPropertyGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E423F2862762F00B60E6F /* TeaPropertyGroup.swift */; };
 		A24546012885A13E005BA710 /* Shuffle in Frameworks */ = {isa = PBXBuildFile; productRef = A24546002885A13E005BA710 /* Shuffle */; };
+		A268114A288DC3000035B5F8 /* PrebrewingSettingsSelectionCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2681149288DC3000035B5F8 /* PrebrewingSettingsSelectionCardCell.swift */; };
 		A26A1DC02878E0B200D166F9 /* ALPopup in Frameworks */ = {isa = PBXBuildFile; productRef = A26A1DBF2878E0B200D166F9 /* ALPopup */; };
 		A26A1DC32878E10000D166F9 /* TTAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A1DC22878E10000D166F9 /* TTAlertManager.swift */; };
 		A275317C2879C2E400CA2E26 /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = A275317B2879C2E400CA2E26 /* Hero */; };
 		A2768F552883286E00768D9D /* PrebrewingOptionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2768F542883286E00768D9D /* PrebrewingOptionCardView.swift */; };
+		A29230C3288AFB0500544DB6 /* M13Checkbox in Frameworks */ = {isa = PBXBuildFile; productRef = A29230C2288AFB0500544DB6 /* M13Checkbox */; };
 		A29AFF4A288702D4005DAB13 /* PreBrewingSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29AFF49288702D4005DAB13 /* PreBrewingSettingsViewController.swift */; };
-		A29AFF4D288706B1005DAB13 /* PreBrewingSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29AFF4C288706B1005DAB13 /* PreBrewingSettingsTableViewCell.swift */; };
 		A29AFF5028871281005DAB13 /* SimpleSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29AFF4F28871281005DAB13 /* SimpleSectionHeaderView.swift */; };
 		A2A72174287F760400284D34 /* PreBrewingSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A72173287F760400284D34 /* PreBrewingSelectionViewController.swift */; };
 		A2A72176287F7BDB00284D34 /* SegmentioExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A72175287F7BDB00284D34 /* SegmentioExtensions.swift */; };
@@ -37,6 +38,10 @@
 		A2A9BD3B2858075000216794 /* TeaPropertiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9BD3A2858075000216794 /* TeaPropertiesCell.swift */; };
 		A2A9BD3D2858166500216794 /* TTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9BD3C2858166500216794 /* TTButton.swift */; };
 		A2A9BD3F2858181600216794 /* AboutTeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9BD3E2858181600216794 /* AboutTeaViewController.swift */; };
+		A2B883142891C16100D75636 /* PrebrewingOptionCardDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B883132891C16100D75636 /* PrebrewingOptionCardDescription.swift */; };
+		A2B883172891C3CF00D75636 /* HapticGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B883162891C3CF00D75636 /* HapticGenerator.swift */; };
+		A2B8831A2891CB1400D75636 /* PrebrewingCardCellSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B883192891CB1400D75636 /* PrebrewingCardCellSelectionDelegate.swift */; };
+		A2B8831D2891D8C000D75636 /* TeaSelectionMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B8831C2891D8C000D75636 /* TeaSelectionMenuViewController.swift */; };
 		A2D6DCD62852946400DD5761 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D6DCD52852946400DD5761 /* AppDelegate.swift */; };
 		A2D6DCD82852946400DD5761 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D6DCD72852946400DD5761 /* SceneDelegate.swift */; };
 		A2D6DCDA2852946400DD5761 /* TeaSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D6DCD92852946400DD5761 /* TeaSelectionViewController.swift */; };
@@ -62,10 +67,10 @@
 		A2368DDD2872E36B007BA25F /* UIViewsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewsExtensions.swift; sourceTree = "<group>"; };
 		A2368DE1287476AB007BA25F /* TeaInteractionStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaInteractionStackView.swift; sourceTree = "<group>"; };
 		A23E423F2862762F00B60E6F /* TeaPropertyGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaPropertyGroup.swift; sourceTree = "<group>"; };
+		A2681149288DC3000035B5F8 /* PrebrewingSettingsSelectionCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrebrewingSettingsSelectionCardCell.swift; sourceTree = "<group>"; };
 		A26A1DC22878E10000D166F9 /* TTAlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTAlertManager.swift; sourceTree = "<group>"; };
 		A2768F542883286E00768D9D /* PrebrewingOptionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrebrewingOptionCardView.swift; sourceTree = "<group>"; };
 		A29AFF49288702D4005DAB13 /* PreBrewingSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreBrewingSettingsViewController.swift; sourceTree = "<group>"; };
-		A29AFF4C288706B1005DAB13 /* PreBrewingSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreBrewingSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		A29AFF4F28871281005DAB13 /* SimpleSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSectionHeaderView.swift; sourceTree = "<group>"; };
 		A2A72173287F760400284D34 /* PreBrewingSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreBrewingSelectionViewController.swift; sourceTree = "<group>"; };
 		A2A72175287F7BDB00284D34 /* SegmentioExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentioExtensions.swift; sourceTree = "<group>"; };
@@ -73,6 +78,10 @@
 		A2A9BD3A2858075000216794 /* TeaPropertiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaPropertiesCell.swift; sourceTree = "<group>"; };
 		A2A9BD3C2858166500216794 /* TTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTButton.swift; sourceTree = "<group>"; };
 		A2A9BD3E2858181600216794 /* AboutTeaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTeaViewController.swift; sourceTree = "<group>"; };
+		A2B883132891C16100D75636 /* PrebrewingOptionCardDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrebrewingOptionCardDescription.swift; sourceTree = "<group>"; };
+		A2B883162891C3CF00D75636 /* HapticGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticGenerator.swift; sourceTree = "<group>"; };
+		A2B883192891CB1400D75636 /* PrebrewingCardCellSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrebrewingCardCellSelectionDelegate.swift; sourceTree = "<group>"; };
+		A2B8831C2891D8C000D75636 /* TeaSelectionMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaSelectionMenuViewController.swift; sourceTree = "<group>"; };
 		A2D6DCD22852946400DD5761 /* TeaTimerRemake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeaTimerRemake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D6DCD52852946400DD5761 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2D6DCD72852946400DD5761 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A29230C3288AFB0500544DB6 /* M13Checkbox in Frameworks */,
 				A24546012885A13E005BA710 /* Shuffle in Frameworks */,
 				A26A1DC02878E0B200D166F9 /* ALPopup in Frameworks */,
 				A2077D08286DC42000788FA9 /* SafeSFSymbols in Frameworks */,
@@ -204,11 +214,22 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		A2681148288DC2B20035B5F8 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				A2B883182891CADB00D75636 /* ViewProtocols */,
+				A2B883122891C12B00D75636 /* ViewModels */,
+				A2681149288DC3000035B5F8 /* PrebrewingSettingsSelectionCardCell.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
 		A26A1DC12878E0D600D166F9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				A2368DDC2872E332007BA25F /* Extensions */,
 				A26A1DC22878E10000D166F9 /* TTAlertManager.swift */,
+				A2B883162891C3CF00D75636 /* HapticGenerator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -232,18 +253,10 @@
 		A29AFF48288702AB005DAB13 /* PreBrewingSettingsScene */ = {
 			isa = PBXGroup;
 			children = (
-				A29AFF4B2887068D005DAB13 /* TableView */,
-				A29AFF49288702D4005DAB13 /* PreBrewingSettingsViewController.swift */,
+				A2B883152891C1F900D75636 /* ViewControllers */,
+				A2681148288DC2B20035B5F8 /* CollectionView */,
 			);
 			path = PreBrewingSettingsScene;
-			sourceTree = "<group>";
-		};
-		A29AFF4B2887068D005DAB13 /* TableView */ = {
-			isa = PBXGroup;
-			children = (
-				A29AFF4C288706B1005DAB13 /* PreBrewingSettingsTableViewCell.swift */,
-			);
-			path = TableView;
 			sourceTree = "<group>";
 		};
 		A29AFF4E28871262005DAB13 /* Views */ = {
@@ -271,6 +284,38 @@
 				A2A9BD3C2858166500216794 /* TTButton.swift */,
 			);
 			path = TeaTimerUIKit;
+			sourceTree = "<group>";
+		};
+		A2B883122891C12B00D75636 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A2B883132891C16100D75636 /* PrebrewingOptionCardDescription.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A2B883152891C1F900D75636 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A29AFF49288702D4005DAB13 /* PreBrewingSettingsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A2B883182891CADB00D75636 /* ViewProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				A2B883192891CB1400D75636 /* PrebrewingCardCellSelectionDelegate.swift */,
+			);
+			path = ViewProtocols;
+			sourceTree = "<group>";
+		};
+		A2B8831B2891D68B00D75636 /* TeaSelectionMenuScene */ = {
+			isa = PBXGroup;
+			children = (
+				A2B8831C2891D8C000D75636 /* TeaSelectionMenuViewController.swift */,
+			);
+			path = TeaSelectionMenuScene;
 			sourceTree = "<group>";
 		};
 		A2C67CCD287B964F0067CF39 /* BrewingTimerScene */ = {
@@ -309,6 +354,7 @@
 		A2D6DCD42852946400DD5761 /* TeaTimerRemake */ = {
 			isa = PBXGroup;
 			children = (
+				A2B8831B2891D68B00D75636 /* TeaSelectionMenuScene */,
 				A29AFF48288702AB005DAB13 /* PreBrewingSettingsScene */,
 				A2A72172287F75C900284D34 /* PreBrewingSelectionScene */,
 				A2C67CCD287B964F0067CF39 /* BrewingTimerScene */,
@@ -368,6 +414,7 @@
 				A26A1DBF2878E0B200D166F9 /* ALPopup */,
 				A275317B2879C2E400CA2E26 /* Hero */,
 				A24546002885A13E005BA710 /* Shuffle */,
+				A29230C2288AFB0500544DB6 /* M13Checkbox */,
 			);
 			productName = TeaTimerRemake;
 			productReference = A2D6DCD22852946400DD5761 /* TeaTimerRemake.app */;
@@ -403,6 +450,7 @@
 				A26A1DBE2878E0B100D166F9 /* XCRemoteSwiftPackageReference "ALPopup" */,
 				A275317A2879C2E400CA2E26 /* XCRemoteSwiftPackageReference "Hero" */,
 				A24545FF2885A13E005BA710 /* XCRemoteSwiftPackageReference "Shuffle" */,
+				A29230C1288AFB0500544DB6 /* XCRemoteSwiftPackageReference "M13Checkbox" */,
 			);
 			productRefGroup = A2D6DCD32852946400DD5761 /* Products */;
 			projectDirPath = "";
@@ -477,6 +525,7 @@
 				A2D6DCDA2852946400DD5761 /* TeaSelectionViewController.swift in Sources */,
 				A2D6DCD62852946400DD5761 /* AppDelegate.swift in Sources */,
 				A26A1DC32878E10000D166F9 /* TTAlertManager.swift in Sources */,
+				A2B8831D2891D8C000D75636 /* TeaSelectionMenuViewController.swift in Sources */,
 				A23E42402862762F00B60E6F /* TeaPropertyGroup.swift in Sources */,
 				A2D6DCD82852946400DD5761 /* SceneDelegate.swift in Sources */,
 				A2077CF7286CEF0300788FA9 /* TeaHealthProperties.swift in Sources */,
@@ -488,16 +537,19 @@
 				A204DF2F2861178B00394647 /* CollectionViewSectionHeader.swift in Sources */,
 				A2077CF5286CEE5000788FA9 /* TeaProperty.swift in Sources */,
 				A2077D01286D058100788FA9 /* TeaPropertyContent.swift in Sources */,
+				A2B883142891C16100D75636 /* PrebrewingOptionCardDescription.swift in Sources */,
 				A204DF2A2861091C00394647 /* TeaMainInfoHeaderView.swift in Sources */,
 				A2A9BD3D2858166500216794 /* TTButton.swift in Sources */,
 				A2077CF9286CF1F200788FA9 /* DescriptableTeaProperty.swift in Sources */,
 				A2077CFB286CF82D00788FA9 /* TeaSuperPowerProperties.swift in Sources */,
 				A2D6DCE02852946400DD5761 /* TeaTimerRemake.xcdatamodeld in Sources */,
 				A29AFF5028871281005DAB13 /* SimpleSectionHeaderView.swift in Sources */,
+				A2B8831A2891CB1400D75636 /* PrebrewingCardCellSelectionDelegate.swift in Sources */,
 				A2368DDE2872E36C007BA25F /* UIViewsExtensions.swift in Sources */,
 				A2A72176287F7BDB00284D34 /* SegmentioExtensions.swift in Sources */,
-				A29AFF4D288706B1005DAB13 /* PreBrewingSettingsTableViewCell.swift in Sources */,
+				A268114A288DC3000035B5F8 /* PrebrewingSettingsSelectionCardCell.swift in Sources */,
 				A2077D0A286DE72100788FA9 /* TeaPropertiesGroup.swift in Sources */,
+				A2B883172891C3CF00D75636 /* HapticGenerator.swift in Sources */,
 				A2077CFD286CFB2500788FA9 /* TeaMainProperties.swift in Sources */,
 				A2A72174287F760400284D34 /* PreBrewingSelectionViewController.swift in Sources */,
 				A2A9BD3B2858075000216794 /* TeaPropertiesCell.swift in Sources */,
@@ -764,6 +816,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		A29230C1288AFB0500544DB6 /* XCRemoteSwiftPackageReference "M13Checkbox" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Marxon13/M13Checkbox";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -791,6 +851,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A275317A2879C2E400CA2E26 /* XCRemoteSwiftPackageReference "Hero" */;
 			productName = Hero;
+		};
+		A29230C2288AFB0500544DB6 /* M13Checkbox */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A29230C1288AFB0500544DB6 /* XCRemoteSwiftPackageReference "M13Checkbox" */;
+			productName = M13Checkbox;
 		};
 /* End XCSwiftPackageProductDependency section */
 

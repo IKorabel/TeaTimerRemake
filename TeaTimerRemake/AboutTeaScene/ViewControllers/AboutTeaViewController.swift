@@ -99,7 +99,7 @@ class AboutTeaViewController: UIViewController {
                       alignment: .topLeading)
             ]
             section.boundarySupplementaryItems.first?.contentInsets.leading = 5
-            section.contentInsets.top = sectionNumber == 0 ? 10 :3
+            section.contentInsets.top = sectionNumber == 0 ? 10 : 3
             return section
         }
     }
